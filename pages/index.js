@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import CoinGecko from 'coingecko-api';
 const coinGeckoClient = new CoinGecko();
-import Head from 'next/head'
 
 export default function Home(props) {
   const { data: {coinmetro: {eur} } } = props.result;
@@ -13,10 +12,7 @@ export default function Home(props) {
   return (
     
     <div className={styles.container}>
-    <Head>
-      <title>XCM 100k</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
+
     <div className={styles.postBody}>
       <div className={styles.uniLight}></div>
     </div>
