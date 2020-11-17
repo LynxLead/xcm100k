@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import CoinGecko from 'coingecko-api';
+
 const coinGeckoClient = new CoinGecko();
 
 export default function Home(props) {
@@ -10,9 +11,10 @@ export default function Home(props) {
   let priceDecimal = price.toFixed(2);
 
   return (
-    
     <div className={styles.container}>
-
+      <head>
+        <title>100K-XCM</title>
+      </head>
     <div className={styles.postBody}>
       <div className={styles.uniLight}></div>
     </div>
