@@ -83,3 +83,11 @@
   color:  rgb(216, 216, 216);
 }
 
+@media only screen and (max-width: 768px) {
+  .cardText {
+    font-size: 3vh;
+  }
+  .price {
+    font-size: 8vh;
+  }
+}
