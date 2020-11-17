@@ -13,7 +13,7 @@ export default function Home(props) {
   return (
     <div className={styles.container}>
       <head>
-        <title>100K-XCM</title>
+        <title>XCM-100K</title>
       </head>
     <div className={styles.postBody}>
       <div className={styles.uniLight}></div>
