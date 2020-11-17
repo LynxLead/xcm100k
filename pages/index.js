@@ -18,7 +18,7 @@ export default function Home(props) {
       
     <div className={styles.container}>
       <div className={styles.card}>
-        <span className={styles.cardText}>Price to buy</span>
+        <span className={styles.cardText}>Cost to buy</span>
         <span className={styles.cardText}>100,000 XCM</span>
       </div>
 
