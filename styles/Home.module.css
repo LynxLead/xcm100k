@@ -17,7 +17,10 @@
   pointer-events: none;
   height: 180vh;
   mix-blend-mode: color;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 196, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  background: 
+  radial-gradient(50% 50% at 50% 50%, 
+  rgb(255 196 0 / 42%) 0%,
+rgba(255, 255, 255, 0) 100%);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -41,6 +44,10 @@
 
 .cardText {
   font-size: 2vh;
+}
+.xcmPriceText {
+  font-size: 1.5vh;
+  color: hsla(0, 0%, 18%, 0.746);
 }
 
 .price {
@@ -86,6 +93,9 @@
 @media only screen and (max-width: 768px) {
   .cardText {
     font-size: 3vh;
+  }
+  .xcmPriceText {
+    font-size: 2.5vh;
   }
   .price {
     font-size: 8vh;

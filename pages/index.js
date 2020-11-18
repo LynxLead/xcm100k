@@ -7,8 +7,18 @@ const coinGeckoClient = new CoinGecko();
 export default function Home(props) {
   const { data: {coinmetro: {eur} } } = props.result;
 
+  const fiat = 'EUR';
+  const lang = 'en-US';
+  //const fiat = 'USD';
+  //const lang = 'en-US';
+
   let price = eur * 100000;
-  let priceDecimal = price.toFixed(2);
+  let priceDecimal = price.toLocaleString(lang, {
+    style: 'currency',
+    currency: fiat,
+  });
+
+  let xmcPrice = eur.toFixed(4);
 
   return (
     <div className={styles.container}>
@@ -23,10 +33,11 @@ export default function Home(props) {
       <div className={styles.card}>
         <span className={styles.cardText}>Cost to buy</span>
         <span className={styles.cardText}>100,000 XCM</span>
+        <span className={styles.xcmPriceText}>€{xmcPrice}</span>
       </div>
 
       <div>
-        <span className={styles.price}>€{priceDecimal}</span>
+        <span className={styles.price}>{priceDecimal}</span>
       </div>
 
       <div className={styles.imgCard} onClick={() => window.location.reload(false)}>
@@ -34,7 +45,7 @@ export default function Home(props) {
       </div>
     </div>
 
-    <a className={styles.anitLawsuit} href="https://icons8.com/icon/tovbiOioOGAO/refresh">Refresh icon by Icons8</a>
+    <a className={styles.anitLawsuit} href="https://icons8.com/icon/tovbiOioOGAO/refresh">Icons by Icons8</a>
 
   </div>
   )
