@@ -1,10 +1,19 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import CoinGecko from 'coingecko-api';
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+
+ReactGA.initialize('G-MKK4N38S17');
 
 const coinGeckoClient = new CoinGecko();
 
 export default function Home(props) {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
+  
+
   const { data: {coinmetro: {eur} } } = props.result;
 
   const fiat = 'EUR';
@@ -21,6 +30,7 @@ export default function Home(props) {
   let xmcPrice = eur.toFixed(4);
 
   return (
+
     <div className={styles.container}>
       <head>
         <title>XCM-100K</title>
