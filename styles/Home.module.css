@@ -101,3 +101,13 @@ rgba(255, 255, 255, 0) 100%);
     font-size: 8vh;
   }
 }
+
+@media only screen and (max-width: 524px) {
+
+.uniLight {
+    background: radial-gradient(80% 50% at 50% 50%, 
+ rgb(255 196 0 / 42%) 0%,
+ rgba(255, 255, 255, 0) 100%);
+
+  }
+}
